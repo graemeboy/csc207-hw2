@@ -126,16 +126,16 @@ public class TwoA {
 	   * @pre none
 	   * @post none
 	   */
-	public static int[] reverseInts(int[] ints) 
+	public static void reverseInts(int[] ints) 
 	{
 		int temp;
+		int lastMinusOne = ints.length - 1;
 		for (int i = 0; i < ints.length/2; i++)
 		{
 			temp = ints[i];
-			ints[i] = ints[ints.length - i - 1];
-			ints[ints.length - i - 1] = temp;
+			ints[i] = ints[lastMinusOne - i];
+			ints[lastMinusOne - i] = temp;
 		}
-		return ints;
 	} // reverseInt(int[])
 
 }
