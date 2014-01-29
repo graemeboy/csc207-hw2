@@ -62,30 +62,22 @@ public class TestTwoA {
 	{
 		int[] ints = { 1, 2, 3, 4, 5 };
 		int[] rsCorrect = { 5, 4, 3, 2, 1 };
-		int[] rsTest = TwoA.reverseInts(ints);
-		for (int i = 0; i < ints.length; i++) {
-			assertEquals("[5,4,3,2,1]", rsCorrect[i], rsTest[i]);
-		}
-		int[] ints1 = { 1 };
-		int[] rsCorrect1 = { 1 };
-		int[] rsTest1 = TwoA.reverseInts(ints1);
-		for (int i = 0; i < ints1.length; i++) {
-			assertEquals("[1]", rsCorrect1[i], rsTest1[i]);
-		}
+		TwoA.reverseInts(ints);
+		assertArrayEquals ("odd number of elements", rsCorrect, ints);
 		
-		int[] ints2 = { 6, 8, 3, 2 };
-		int[] rsCorrect2 = { 2, 3, 8, 6 };
-		int[] rsTest2 = TwoA.reverseInts(ints2);
-		for (int i = 0; i < ints2.length; i++) {
-			assertEquals("[2,3,8,6]", rsCorrect2[i], rsTest2[i]);
-		}
+		int[] ints1 = { 1, 2, 3, 4, 5, 6 };
+		int[] rsCorrect1 = {6, 5, 4, 3, 2, 1 };
+		TwoA.reverseInts(ints1);
+		assertArrayEquals ("even number of elements", rsCorrect1, ints1);
 		
-		// Try an empty array.
-		int[] ints3 = {  };
-		int[] rsCorrect3 = {  };
-		int[] rsTest3 = TwoA.reverseInts(ints3);
-		for (int i = 0; i < ints3.length; i++) {
-			assertEquals("[]", rsCorrect3[i], rsTest3[i]);
-		}
+		int[] ints2 = { 1};
+		int[] rsCorrect2 = {1 };
+		TwoA.reverseInts(ints2);
+		assertArrayEquals ("one element", rsCorrect2, ints2);
+		 
+		int[] ints3 = { };
+		int[] rsCorrect3 = { };
+		TwoA.reverseInts(ints3);
+		assertArrayEquals ("null", rsCorrect3, ints3);
 	}
 }
