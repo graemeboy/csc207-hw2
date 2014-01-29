@@ -121,8 +121,7 @@ public class TwoA {
 	   *  
 	   * @param int array ints[]
 	   *          an array of integers
-	   * @return ints[]
-	   * 	an array of integers
+	   * @return void
 	   * @pre none
 	   * @post none
 	   */
