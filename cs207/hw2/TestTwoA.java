@@ -14,7 +14,7 @@ public class TestTwoA {
 		assertEquals("80 is not a multiple of 17", false,
 				TwoA.isMultiple(80, 17));
 		assertEquals("23 is not a multiple of 56", false,
-				TwoA.isMultiple(23, 56));
+				TwoA.isMultiple(23, 46));
 	}
 
 	@Test
@@ -45,7 +45,7 @@ public class TestTwoA {
 				TwoA.allDistinct(ints));
 
 		int[] ints1 = { 1 };
-		assertEquals("all numbers are distinct: true", true,
+		assertEquals("single element: true", true,
 				TwoA.allDistinct(ints1));
 
 		int[] ints2 = { 1, 2, 3, 4, 2 };
@@ -53,7 +53,7 @@ public class TestTwoA {
 				TwoA.allDistinct(ints2));
 		
 		int[] ints3 = { };
-		assertEquals("all numbers are distinct: true", true,
+		assertEquals("null: true", true,
 				TwoA.allDistinct(ints3));
 	}
 
