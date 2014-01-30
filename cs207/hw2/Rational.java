@@ -33,7 +33,7 @@ public class Rational {
 	public Rational clone() 
 	{
 		return null; //STUB
-	} // clone
+	} // clone()
 
 	// +---------+--------------------------------------------------------
 	// | Methods |
@@ -43,13 +43,13 @@ public class Rational {
 	public int getNumerator() 
 	{
 		return 0; //STUB
-	} // getNumerator
+	} // getNumerator()
 
 	/* Return the denominator of the rational number (Getter) */
 	public int getDenominator() 
 	{
 		return 0; //STUB
-	} // getDenominator
+	} // getDenominator()
 
 	/*
 	 * Return the floating point value of the rational number (Observer)
@@ -57,7 +57,7 @@ public class Rational {
 	public double getDecimal() 
 	{
 		return 0; //STUB
-	} // getDecimal
+	} // getDecimal()
 
 	/*
 	 * Returns the sum of this and another rational number
