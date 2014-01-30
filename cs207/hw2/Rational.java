@@ -1,6 +1,6 @@
 package cs207.hw2;
 /**
- * Provides useful methods for dealing with rational numbers.
+ * Provides useful methods for dealing with rational numbers (defined fractions of integers).
  */
 public class Rational {
 	// +--------+---------------------------------------------------------
@@ -17,15 +17,13 @@ public class Rational {
 	/* Fraction constructor (Constructor) */
 	public Rational(int num, int den) 
 	{
-		numerator = num;
-		denominator = den;
+		return null; //STUB
 	}
 
 	/* Integer constructor (Constructor) */
 	public Rational(int num) 
 	{
-		numerator = num;
-		denominator = 1;
+		return null; //STUB
 	}
 
 	/*
@@ -34,7 +32,7 @@ public class Rational {
 	 */
 	public Rational clone() 
 	{
-		return null;
+		return null; //STUB
 	} // clone
 
 	// +---------+--------------------------------------------------------
@@ -44,13 +42,13 @@ public class Rational {
 	/* Return the numerator of the rational number (Getter) */
 	public int getNumerator() 
 	{
-		return numerator;
+		return 0; //STUB
 	} // getNumerator
 
 	/* Return the denominator of the rational number (Getter) */
 	public int getDenominator() 
 	{
-		return denominator;
+		return 0; //STUB
 	} // getDenominator
 
 	/*
@@ -58,7 +56,7 @@ public class Rational {
 	 */
 	public double getDecimal() 
 	{
-		return numerator / denominator;
+		return 0; //STUB
 	} // getDecimal
 
 	/*
@@ -78,6 +76,16 @@ public class Rational {
 	{
 		return null; // STUB
 	} // subtract (Rational)
+	
+	/*
+	 * Returns the product of this and another rational number.
+	 * (Constructor/Observer)
+	 */
+	public Rational multiply(Rational a) 
+	{
+		return null; // STUB
+	} // multiply (Rational)
+
 
 	/*
 	 * Returns the quotient of this and another rational number.
@@ -90,7 +98,7 @@ public class Rational {
 
 	/*
 	 * Returns the value of this rational number raised to the power an integer
-	 * rational number. (Constructor/Observer)
+	 * number. (Constructor/Observer)
 	 */
 	public Rational exponent(int p) 
 	{
@@ -114,6 +122,9 @@ public class Rational {
 		return 0; // STUB
 	} // compareTo (Rational)
 
+	/*
+	 * Returns the string reperesenting this rational number. (Observer)
+	 */
 	public String toString (Rational a) 
 	{
 		return null;
