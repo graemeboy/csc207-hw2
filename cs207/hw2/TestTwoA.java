@@ -13,9 +13,11 @@ public class TestTwoA {
 				TwoA.isMultiple(81, 3));
 		assertEquals("80 is not a multiple of 17", false,
 				TwoA.isMultiple(80, 17));
-		assertEquals("23 is not a multiple of 56", false,
+		assertEquals("23 is not a multiple of 46", false,
 				TwoA.isMultiple(23, 46));
-	}
+		assertEquals("0 is a multiple of 46", true,
+				TwoA.isMultiple(0, 46));		
+	} //isMultipleTest() 
 
 	@Test
 	public void isOddTest1() 
@@ -26,7 +28,7 @@ public class TestTwoA {
 		assertEquals("negative odd", true, TwoA.isOdd(-27));
 		assertEquals("MAX_VALUE", true, 
 				TwoA.isOdd(Integer.MAX_VALUE));
-	}
+	}//isOddTest1()
 
 	@Test
 	public void oddSumToTest1() 
@@ -35,8 +37,17 @@ public class TestTwoA {
 		assertEquals("9 sums to 16", 16, TwoA.oddSumTo(9));
 		assertEquals("15 sums to 49", 49, TwoA.oddSumTo(15));
 		assertEquals("8 sums to 16", 16, TwoA.oddSumTo(8));
-	}
+	}//oddSumToTest1()
 
+	@Test
+	public void isOddProduct() 
+	{
+		assertEquals("null", false, TwoA.isOddProduct(new int[] {}));
+		assertEquals("single element", false, TwoA.isOddProduct(new int[] {1}));
+		assertEquals("single odd", false, TwoA.isOddProduct(new int[] {1, 2}));
+		assertEquals("no odds", false, TwoA.isOddProduct(new int[] {4, 2, 68}));
+		assertEquals("two odds", true, TwoA.isOddProduct(new int[] {1, 2, 3}));
+	}//isOddProduct()
 	@Test
 	public void allDistinctTest() 
 	{
@@ -55,7 +66,7 @@ public class TestTwoA {
 		int[] ints3 = { };
 		assertEquals("null: true", true,
 				TwoA.allDistinct(ints3));
-	}
+	}//allDistinctTest() 
 
 	@Test
 	public void reverseIntsTest() 
